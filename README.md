@@ -1,2 +1,6 @@
-# PYQT_Project-Speed_testing-if-text-
-Проект с яндекс лицей
+Задачи:
+1. Сделать главное меню
+2. Запрогать главное меню
+
+Полезные ссылки:
+1. CSS стили:https://doc.qt.io/qt-6/stylesheet-syntax.html

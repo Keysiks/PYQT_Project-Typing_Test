@@ -45,8 +45,7 @@ class Enter_form(QMainWindow):
                 self.timer.timeout.connect(lambda: self.close())
                 self.button_begin.show()
                 self.parent.ENTER_SYSTEM = True
-                if self.res is False:
-                    self.session.save_session(login, password)
+                self.session.save_session(login, password)
             else:
                 self.error_label.setText("Вы ввели неверный пароль, повторите попытку.")
         self.connection.commit()

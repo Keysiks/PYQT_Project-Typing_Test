@@ -5,6 +5,7 @@ from PyQt5 import uic  # Импортируем uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCheckBox, QLineEdit, QPushButton
 from check_password_class import Check_password
 from PyQt5.QtCore import QTimer
+from save_session import Save_session
 
 
 class Register_form(QMainWindow):
@@ -21,6 +22,7 @@ class Register_form(QMainWindow):
                         password TEXT);
                         """)
         self.parent = parent
+        self.session = Save_session()
 
     def registration(self):
         login = self.registr_login.text()
@@ -30,7 +32,7 @@ class Register_form(QMainWindow):
         res = self.cursor.execute(f"""SELECT * FROM users WHERE user_name='{login}';""").fetchone()
         check_pass = self.check_password.check_password(password1)
         if password1 != password2:
-            self.error_label.setText("Пароли не совпадают, введите снова")
+            self.error_label.setText("Пароли не совпадают, введите заново")
         elif login == '' or password1 == "" or password2 == "":
             self.error_label.setText("Поля не должны быть пустыми")
         elif check_pass != 'ok':
@@ -47,6 +49,7 @@ class Register_form(QMainWindow):
             self.timer.start(1000)
             self.timer.timeout.connect(lambda: self.close())
             self.button_begin.show()
+            self.session.save_session(login, password1)
         self.connection.commit()
 
 

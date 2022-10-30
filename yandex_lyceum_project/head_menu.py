@@ -13,20 +13,26 @@ from save_session import Save_session
 
 class Head_Menu(QMainWindow):
     def __init__(self):
+        super(Head_Menu, self).__init__()
+        uic.loadUi('head_menu.ui', self)
         if not os.path.exists("session_file.txt"):
             with open("session_file.txt", "w") as f:
                 f.write('')
         self.connection = sqlite3.connect("for_typing_test.bd")
         self.cursor = self.connection.cursor()
-        super(Head_Menu, self).__init__()
-        uic.loadUi('head_menu.ui', self)
+        self.cursor.execute("""CREATE TABLE IF NOT EXISTS results(  
+                user_name TEXT PRIMARY Key,
+                ru_result INT,
+                eng_result INT);
+                """)
         self.ENTER_SYSTEM = False
-        self.save_session = Save_session()
+        self.session = Save_session()
         self.button_begin.hide()
         self.button_about_programm.clicked.connect(self.show_text_about_programm)
         self.button_come_in.clicked.connect(self.button_come_in_push)
         self.head_button_registr.clicked.connect(self.registr_push)
         self.button_begin.clicked.connect(self.button_begin_push)
+        self.button_result_list.clicked.connect(self.show_results)
 
     def show_text_about_programm(self):
         self.about_programm = About_Programm()
@@ -49,6 +55,8 @@ class Head_Menu(QMainWindow):
         else:
             print("NO")
 
+    def show_results(self):
+        pass
 
 
 def except_hook(cls, exception, traceback):

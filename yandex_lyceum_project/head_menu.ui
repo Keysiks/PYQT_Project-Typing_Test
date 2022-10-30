@@ -35,7 +35,7 @@
    <widget class="QPushButton" name="button_begin">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>160</y>
       <width>191</width>
       <height>61</height>
@@ -62,7 +62,7 @@ QPushButton:hover {
    <widget class="QPushButton" name="button_about_programm">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>290</y>
       <width>221</width>
       <height>31</height>
@@ -85,7 +85,7 @@ QPushButton:hover {
    <widget class="QPushButton" name="button_come_in">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>80</y>
       <width>221</width>
       <height>31</height>
@@ -108,7 +108,7 @@ QPushButton:hover {
    <widget class="QPushButton" name="head_button_registr">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>30</y>
       <width>221</width>
       <height>31</height>
@@ -128,10 +128,10 @@ QPushButton:hover {
      <string>Регистрация</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_lider_list">
+   <widget class="QPushButton" name="button_result_list">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>340</y>
       <width>221</width>
       <height>31</height>
@@ -148,10 +148,10 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Лучшие результаты</string>
+     <string>Результаты</string>
     </property>
    </widget>
-   <zorder>button_lider_list</zorder>
+   <zorder>button_result_list</zorder>
    <zorder>head_button_registr</zorder>
    <zorder>button_come_in</zorder>
    <zorder>button_about_programm</zorder>

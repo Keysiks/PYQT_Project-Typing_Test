@@ -3,7 +3,7 @@ class Check_password:
         pass
 
     def check_password(self, password):
-        bad_combinations = "qwertyuiop asdfghjkl zxcvbnm йцукенгшщзхъ фывапролджэё ячсмитьбю"
+        bad_combinations = "qwertyuiop asdfghjkl zxcvbnm йцукенгшщзхъ фывапролджэё ячсмитьбю 0123456789"
         for i in range(len(password) - 2):
             if password[i:i + 3].lower() in bad_combinations:
                 return 'bad comb'

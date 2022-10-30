@@ -10,3 +10,4 @@
 2. https://colorscheme.ru/html-colors.html цвета
 3. Пример проги https://fastfingers.net/typingtest/russian
 4. https://pythonpip.ru/examples/kak-sgenerirovat-sluchaynuyu-stroku-python - примеры случайной генирации текста и строк.
+5. мой вопрос на stackoverflow https://ru.stackoverflow.com/questions/1462055/как-изменить-цвет-части-текста-в-pyqt5

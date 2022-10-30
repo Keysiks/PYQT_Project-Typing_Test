@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: black;</string>
+   <string notr="true">background: #141414;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -79,7 +79,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>120</y>
+      <y>110</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -102,8 +102,8 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>140</y>
-      <width>181</width>
+      <y>150</y>
+      <width>291</width>
       <height>20</height>
      </rect>
     </property>

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: black; color: red;</string>
+   <string notr="true">background: black; color: #141414;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="programm_text">

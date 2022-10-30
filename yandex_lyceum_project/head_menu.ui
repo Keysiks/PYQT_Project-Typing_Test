@@ -1,40 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>head_menu_window</class>
+ <widget class="QMainWindow" name="head_menu_window">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>790</width>
-    <height>650</height>
+    <width>272</width>
+    <height>407</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>272</width>
+    <height>407</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>272</width>
+    <height>407</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: black;</string>
+   <string notr="true">background: #141414;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="button_begin">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>270</y>
+      <x>30</x>
+      <y>160</y>
       <width>191</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    color: red;
-	font-size: 30px;
+    border: 1px solid #cc0034;
+    background: none;
+    color: #cc0034;
+	font-size: 24px;
+	font-family: 'gilroy';
+	font-weight: 900;
 }
-
 QPushButton:hover {
-    color: white;
-}</string>
+    background: #cc0034;
+    color: #141414;
+} </string>
     </property>
     <property name="text">
      <string>Начать!</string>
@@ -43,8 +62,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="button_about_programm">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>20</y>
+      <x>20</x>
+      <y>290</y>
       <width>221</width>
       <height>31</height>
      </rect>
@@ -66,8 +85,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="button_come_in">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>530</y>
+      <x>20</x>
+      <y>80</y>
       <width>221</width>
       <height>31</height>
      </rect>
@@ -86,11 +105,11 @@ QPushButton:hover {
      <string>Войти</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_registr">
+   <widget class="QPushButton" name="head_button_registr">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>30</y>
       <width>221</width>
       <height>31</height>
      </rect>
@@ -112,8 +131,8 @@ QPushButton:hover {
    <widget class="QPushButton" name="button_lider_list">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>530</y>
+      <x>20</x>
+      <y>340</y>
       <width>221</width>
       <height>31</height>
      </rect>
@@ -129,19 +148,14 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Список лидеров</string>
+     <string>Лучшие результаты</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>790</width>
-     <height>26</height>
-    </rect>
-   </property>
+   <zorder>button_lider_list</zorder>
+   <zorder>head_button_registr</zorder>
+   <zorder>button_come_in</zorder>
+   <zorder>button_about_programm</zorder>
+   <zorder>button_begin</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

@@ -45,6 +45,7 @@ class Register_form(QMainWindow):
         else:
             self.error_label.setText("Вы успешно зарегистрованы!")
             self.cursor.execute(f"""INSERT INTO users VALUES(?, ?);""", (login, password1))
+            self.cursor.execute(f"""INSERT INTO results VALUES(?, ?, ?);""", (login, 0, 0))
             self.parent.ENTER_SYSTEM = True
             self.timer.start(1000)
             self.timer.timeout.connect(lambda: self.close())

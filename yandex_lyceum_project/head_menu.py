@@ -4,11 +4,13 @@ import os
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCheckBox, QLineEdit, QPushButton, QWidget
+from PyQt5.QtCore import QTimer
 from about_programm import About_Programm
 from register_form import Register_form
 from enter_form import Enter_form
 from game_form import Game_form
 from save_session import Save_session
+from best_results import Best_Results
 
 
 class Head_Menu(QMainWindow):
@@ -33,6 +35,8 @@ class Head_Menu(QMainWindow):
         self.head_button_registr.clicked.connect(self.registr_push)
         self.button_begin.clicked.connect(self.button_begin_push)
         self.button_result_list.clicked.connect(self.show_results)
+        self.best_results = Best_Results()
+        self.timer = QTimer()
 
     def show_text_about_programm(self):
         self.about_programm = About_Programm()
@@ -56,7 +60,10 @@ class Head_Menu(QMainWindow):
             print("NO")
 
     def show_results(self):
-        pass
+        if self.ENTER_SYSTEM is False:
+            pass
+        else:
+            self.best_results.show()
 
 
 def except_hook(cls, exception, traceback):

@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: #00BFFF;</string>
+   <string notr="true">background: #0000FF;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QRadioButton" name="radioButton">
@@ -187,22 +187,6 @@ font-size: 16px; font-weight: 900;</string>
      <string notr="true">count_group</string>
     </attribute>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>680</y>
-      <width>440</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: white;
-border: 1px solid gold;
-font-size: 30px; 
-font-weight: 900;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="timer_label">
     <property name="geometry">
      <rect>
@@ -298,13 +282,29 @@ QPushButtpon: hover{
      <string/>
     </property>
    </widget>
+   <widget class="QTextEdit" name="area_for_typing">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>680</y>
+      <width>591</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: white;
+border: 1px solid gold;
+font-size: 30px; 
+font-weight: 900;</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="language_group"/>
   <buttongroup name="count_group"/>
+  <buttongroup name="language_group"/>
  </buttongroups>
 </ui>
